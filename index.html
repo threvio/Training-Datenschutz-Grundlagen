@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz-Grundlagen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="course-layout">
+
+        <!-- Sitliche Navigation -->
+         <aside class="sidebar">
+            <h2 class="sidebar-title">Datenschutz-Grundlagen</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <nav class="lesson-nav">
+                <button class="nav-item active" data-view="lektion1">Lektion 1 · Video</button>
+                <button class="nav-item" data-view="lektion2">Lektion 2 · PDF</button>
+                <button class="nav-item" data-view="lektion3">Lektion 3 · Video</button>
+                <button class="nav-item" data-view="lektion4">Lektion 4 · PDF</button>
+                <button class="nav-item locked" data-view="quiz">Quiz</button>
+            </nav>
+         </aside>
+
+         <!-- Inhaltsbereich -->
+          <main class="content">
+
+            <section class="view active" id="lektion1">
+                <h1>Lektion 1: Was ist Datenschutz?</h1>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/bGHo6ahlXTI"
+                        title="Lektion 1 Video"
+                        frameborder="0"
+                         allowfullscreen>
+                    </iframe>
+                </div>
+                <button class="btn-next" data-lesson="lektion1">Als erledigt markieren</button>
+            </section>
+
+            <section class="view" id="lektion2">
+                <h1>Lektion 2: Die DSGVO im Überblick</h1>
+                <div class="pdf-wrapper">
+                    <iframe src="lektionen/lektion2.pdf" title="Lektion 2 PDF"></iframe>
+                </div>
+                 <button class="btn-next" data-lesson="lektion2">Als erledigt markieren</button>
+            </section>
+
+            <section class="view" id="lektion3">
+                <h1>Lektion 3: Pflichten der Beschäftigten im Arbeitsschutz</h1>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/o92tZGTbjME"
+                        title="Lektion 3 Video"
+                        frameborder="0"
+                         allowfullscreen>
+                    </iframe>
+                </div>
+                <button class="btn-next" data-lesson="lektion3">Als erledigt markieren</button> 
+            </section>
+
+            <section class="view" id="lektion4">
+                <h1>Lektion 4: Pflichten für Unternehmen</h1>
+                <div class="pdf-wrapper">
+                    <iframe src="lektionen/lektion4.pdf" title="Lektion 4 PDF"></iframe>
+                </div>
+                <button class="btn-next" data-lesson="lektion4">Als erledigt markieren</button>
+            </section>
+
+         <!-- Quiz -->
+          <section class="view" id="quiz">
+                <h1>Abschlussquiz</h1>
+
+                <div class="question" data-answer="b">
+                    <p class="question-text">1. Was bedeutet die Abkürzung „DSGVO"?</p>
+                    <div class="options">
+                        <button class="option" data-value="a">Digitale Sicherheits-Grundverordnung</button>
+                        <button class="option" data-value="b">Datenschutz-Grundverordnung</button>
+                        <button class="option" data-value="c">Daten-Speicher-Verordnung</button>
+                    </div>
+                </div>
+
+                <div class="question" data-answer="a">
+                    <p class="question-text">2. Personenbezogene Daten dürfen ohne Rechtsgrundlage ...</p>
+                    <div class="options">
+                        <button class="option" data-value="a">nicht verarbeitet werden</button>
+                        <button class="option" data-value="b">frei verkauft werden</button>
+                        <button class="option" data-value="c">beliebig gespeichert werden</button>
+                    </div>
+                </div>
+
+                <div class="question" data-answer="c">
+                    <p class="question-text">3. Wie lange dürfen personenbezogene Daten gespeichert werden?</p>
+                    <div class="options">
+                        <button class="option" data-value="a">Unbegrenzt lange</button>
+                        <button class="option" data-value="b">Genau zehn Jahre</button>
+                        <button class="option" data-value="c">Nur so lange, wie es für den Zweck nötig ist</button>
+                    </div>
+                </div>
+
+                <div class="question" data-answer="a">
+                    <p class="question-text">4. Wer darf Auskunft über die eigenen gespeicherten Daten verlangen?</p>
+                    <div class="options">
+                        <button class="option" data-value="a">Die betroffene Person selbst</button>
+                        <button class="option" data-value="b">Nur Behörden</button>
+                        <button class="option" data-value="c">Niemand</button>
+                    </div>
+                </div>
+
+                <button id="finishBtn" class="btn-primary">Auswerten &amp; abschließen</button>
+                <div id="result" class="result"></div>
+            </section>
+
+          </main>
+    </div>
+
+    <script src="nav.js"></script>
+    <script src="progress.js"></script>
+    <script src="quiz.js"></script>
+    <script src="scorm.js"></script>
+</body>
+</html>
